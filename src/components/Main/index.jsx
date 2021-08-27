@@ -1,9 +1,9 @@
 import * as S from './styles'
 
-const Main = () => (
+const Main = ({ title, description }) => (
   <S.Wrapper>
-    <S.Title>Projeto Hackaton</S.Title>
-    <S.Description>Projeto desenvolvido</S.Description>
+    <S.Title>{title}</S.Title>
+    <S.Description>{description}</S.Description>
   </S.Wrapper>
 )
 
