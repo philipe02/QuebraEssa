@@ -5,6 +5,7 @@ export default function Home() {
     <Main
       title="Projeto Hackaton"
       description="Projeto desenvolvido para o Hackaton da Hub Salvador"
+      nome="Philipe"
     />
   )
 }
