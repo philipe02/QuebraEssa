@@ -1,3 +1,9 @@
-it('should render the heading', () => {
-  expect(2 + 2).toBe(4)
+import Footer from '.'
+import { render, screen } from '@testing-library/react'
+
+describe('<Footer/>', () => {
+  it('should render the heading', () => {
+    render(<Footer />)
+    expect(screen.queryByText('Ligue-nos')).toBeInTheDocument()
+  })
 })

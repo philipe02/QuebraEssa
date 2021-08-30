@@ -1,11 +1,17 @@
 import * as S from './styles'
 import Image from 'next/image'
-import imglogoTipo from '../../assets/logoTipo.png'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faFacebook,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => (
   <S.Wrapper>
     <S.LogoTipo>
-      <Image src={imglogoTipo} alt="My Image" />
+      <Image layout="fill" src="/logoTipo.png" alt="Logo tipo Quebra" />
     </S.LogoTipo>
     <S.DivCard>
       <S.Card>
@@ -13,35 +19,29 @@ const Footer = () => (
         <S.Ul>
           <S.Li>
             <S.TextCard>
-              <S.Link href="https://wa.me/55719999-9999">(71) 9999-9999</S.Link>
+              <S.Link href="https://wa.me/55719999-9999" target="_blank">
+                (71) 9999-9999
+              </S.Link>
             </S.TextCard>
           </S.Li>
           <S.Li>
             <S.TextCard>
-              <S.Link href="https://wa.me/55713333-3333">(71) 3333-3333</S.Link>
+              <S.Link href="https://wa.me/55713333-3333" target="_blank">
+                (71) 3333-3333
+              </S.Link>
             </S.TextCard>
           </S.Li>
           <S.Li>
             <S.TextCard> Precisa de ajuda?</S.TextCard>
           </S.Li>
         </S.Ul>
-        <S.Link href="https://wa.me/55719999-9999">
+        <S.Link href="https://wa.me/55719999-9999" target="_blank">
           <S.ButtonContato>Ligue-nos</S.ButtonContato>
         </S.Link>
       </S.Card>
       <S.Card>
         <S.TitleCard>Desenvolvedores</S.TitleCard>
         <S.Ul>
-          <S.Li>
-            <S.TextCard>
-              <S.Link href="https://github.com/philipe02">Philipe</S.Link>
-            </S.TextCard>
-          </S.Li>
-          <S.Li>
-            <S.TextCard>
-              <S.Link href="https://github.com/MoisesRequiao">Moises</S.Link>
-            </S.TextCard>
-          </S.Li>
           <S.Li>
             <S.TextCard>
               <S.Link href="https://github.com/joaovictorbrito">
@@ -51,7 +51,21 @@ const Footer = () => (
           </S.Li>
           <S.Li>
             <S.TextCard>
-              <S.Link href="https://github.com/lucaspereira530">Lucas</S.Link>
+              <S.Link href="https://github.com/lucaspereira530">
+                Lucas Pereira
+              </S.Link>
+            </S.TextCard>
+          </S.Li>
+          <S.Li>
+            <S.TextCard>
+              <S.Link href="https://github.com/MoisesRequiao">
+                Moises Requião
+              </S.Link>
+            </S.TextCard>
+          </S.Li>
+          <S.Li>
+            <S.TextCard>
+              <S.Link href="https://github.com/philipe02">Philipe</S.Link>
             </S.TextCard>
           </S.Li>
           <S.Li>
@@ -71,7 +85,17 @@ const Footer = () => (
           </S.Li>
           <S.Li>
             <S.TextCard>
-              <S.Link href="#services">Serviços</S.Link>
+              <S.Link href="#services">Todos os Serviços</S.Link>
+            </S.TextCard>
+          </S.Li>
+          <S.Li>
+            <S.TextCard>
+              <S.Link href="allServices">Serviços mais usados</S.Link>
+            </S.TextCard>
+          </S.Li>
+          <S.Li>
+            <S.TextCard>
+              <S.Link href="#professionals">Profissionais</S.Link>
             </S.TextCard>
           </S.Li>
         </S.Ul>
@@ -82,17 +106,18 @@ const Footer = () => (
           <S.SocialNetworks>
             <S.Li>
               <S.Icone>
-                <i className="fab fa-github-alt"></i>
+                <FontAwesomeIcon icon={faGithub} />
+                {/* <i className="fab fa-github-alt"></i> */}
               </S.Icone>
             </S.Li>
             <S.Li>
               <S.Icone>
-                <i className="fab fa-facebook"></i>
+                <FontAwesomeIcon icon={faFacebook} />
               </S.Icone>
             </S.Li>
             <S.Li>
               <S.Icone>
-                <i className="fab fa-instagram"></i>
+                <FontAwesomeIcon icon={faInstagram} />
               </S.Icone>
             </S.Li>
           </S.SocialNetworks>

@@ -2,67 +2,74 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.footer`
   width: 100%;
-  height: 100%;
-  padding: 3rem 0;
+  padding: 6rem 0rem 0rem 0rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
 `
 export const LogoTipo = styled.div`
-  width: 211.37px;
-  height: 68.78px;
+  position: relative;
+  width: 199.37px;
+  height: 60.78px;
+  margin-bottom: 40px;
+  object-fit: cover;
 `
 export const DivCard = styled.div`
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-columns: 240px 240px 240px 240px;
   text-align: center;
   align-items: center;
 `
 export const Card = styled.div`
   height: 200px;
 `
-export const TitleCard = styled.h2`
+export const TitleCard = styled.h1`
   color: #212353;
-  font-size: 20px;
+  font-size: 17px;
   margin-top: 50px;
 `
 export const TextCard = styled.div`
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 30px;
-  color: #000000;
+  color: #272525e3;
 `
 export const Ul = styled.ul`
+  margin-top: 6px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 30px;
-  color: #000000;
+  color: #393940;
   list-style-type: none;
   text-decoration: none;
 `
 export const Li = styled.li`
+  margin-top: 11px;
   list-style-type: none;
   text-decoration: none;
 `
 export const Link = styled.a`
   padding: 20px;
-  color: #000000;
+  color: #2d2d2f;
+  font-weight: bold;
   &:hover {
-    color: #9986b2;
+    color: #615d5c;
   }
 `
 export const ButtonContato = styled.button`
-  width: 88.56px;
-  height: 47.09px;
-  font-size: 14px;
+  width: 110.56px;
+  height: 39.09px;
+  font-weight: 00;
+  /* font-weight: bold; */
+  font-size: 15px;
   background-color: #9c69e2;
   color: #fff;
   border-radius: 50px;
   border: none;
   cursor: pointer;
+
   &:hover {
     background-color: #9986b2;
   }
@@ -71,17 +78,20 @@ export const DivCopywriting = styled.div`
   padding: 0px;
   width: 100%;
   text-align: center;
-  height: 68.78px;
+  height: 40px;
   border-top: solid #c1c3e2 1px;
-  margin-top: 50px;
+  margin-top: 100px;
 `
 export const Copywriting = styled.h4`
   font-size: 13px;
   margin-top: 9px;
+  color: #6a6a77;
 `
 export const SocialNetworks = styled.div`
   padding: 0;
   display: flex;
+  align-items: center;
+
   justify-content: center;
   text-align: center;
   margin: 0 auto;
@@ -89,4 +99,8 @@ export const SocialNetworks = styled.div`
 export const Icone = styled.div`
   font-size: 12pt;
   margin-left: 9px;
+  margin-top: 0;
+
+  background-color: #9c69e2;
+  padding: 1px 10px;
 `
