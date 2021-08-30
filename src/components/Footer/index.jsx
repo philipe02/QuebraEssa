@@ -1,7 +1,7 @@
 import * as S from './styles'
 import Image from 'next/image'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import {
   faGithub,
   faFacebook,
@@ -11,7 +11,7 @@ import {
 const Footer = () => (
   <S.Wrapper>
     <S.LogoTipo>
-      <Image layout="fill" src="/logoTipo.png" alt="Logo tipo Quebra" />
+      <Image layout="fill" src="/assets/logoTipo.png" alt="Logo tipo Quebra" />
     </S.LogoTipo>
     <S.DivCard>
       <S.Card>
