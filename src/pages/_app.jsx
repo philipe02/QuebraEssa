@@ -1,3 +1,4 @@
+import Footer from 'components/Footer'
 import Header from 'components/Header'
 import Head from 'next/head'
 
@@ -13,10 +14,10 @@ function App({ Component, pageProps }) {
           content="A simple project starter to work with React, NextJS and Styled Components"
         />
       </Head>
-
       <GlobalStyles />
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   )
 }
