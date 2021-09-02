@@ -1,18 +1,12 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 
-import Main from '.'
+const Button = ({ onClick, children }) => (
+  <button onClick={onClick}>{children}</button>
+)
 
-describe('<Main />', () => {
-  it('should render the heading', () => {
-    render(
-      <Main
-        title="Projeto Hackaton"
-        description="Projeto desenvolvido para o Hackaton da Hub Salvador"
-      />
-    )
-
-    expect(
-      screen.getByRole('heading', { name: /projeto hackaton/i })
-    ).toBeInTheDocument()
-  })
+test('calls onClick prop when clicked', () => {
+  const handleClick = jest.fn()
+  render(<Button onClick={handleClick}>Click Me</Button>)
+  fireEvent.click(screen.getByText(/click me/i))
+  expect(handleClick).toHaveBeenCalledTimes(1)
 })
