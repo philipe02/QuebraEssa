@@ -6,7 +6,7 @@ const Main = () => (
   <S.Wrapper>
     <S.Introducao>
       <Image
-        src="/assets/imgIntroducao.png"
+        src="/assets/imgIntroducao.jpg"
         alt="imagem aperto de maos"
         layout="fill"
         objectFit="cover"
@@ -232,7 +232,7 @@ const Main = () => (
     </S.SectionServices>
     <S.SectionOportunidade>
       <Image
-        src="/assets/oportunidade.png"
+        src="/assets/oportunidade.jpg"
         layout="fill"
         alt="oportunidade"
         objectFit="cover"

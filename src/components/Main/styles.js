@@ -66,7 +66,6 @@ export const SectionSobre = styled.section`
   font-family: 'Roboto', sans-serif;
   @media (max-width: 768px) {
     flex-direction: column;
-
     width: 100%;
   }
 `
@@ -112,11 +111,9 @@ export const SectionServices = styled.section`
   position: relative;
   width: 100vw;
   display: flex;
-
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   margin-top: 80px;
 `
 export const TitleService = styled.h1`
@@ -184,12 +181,13 @@ export const DivOportunidade = styled.div`
     'TitleOportunidade TitleOportunidade'
     'TextOportunidade TextOportunidade'
     'ButtonRegister ButtonRegister ';
-  @media (max-width: 768px) {
+  @media (max-width: 914px) {
     margin: 0 0 0 8%;
     flex-direction: column;
     display: block;
     width: 100vw;
     line-height: 5rem;
+    left: 60%;
   }
 `
 export const TitleOportunidade = styled.h1`
@@ -197,21 +195,18 @@ export const TitleOportunidade = styled.h1`
   width: 400;
   font-size: 34pt;
   text-transform: uppercase;
-  @media (max-width: 768px) {
+  @media (max-width: 825px) {
     font-size: 26pt;
   }
 `
 export const TextOportunidade = styled.p`
   grid-area: TextOportunidade;
-
   font-size: 15pt;
 `
 export const ButtonRegister = styled.button`
   grid-area: ButtonRegister;
-
   width: 200px;
   height: 50px;
-
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
@@ -235,17 +230,10 @@ export const ButtonRegister = styled.button`
 `
 export const SectionServiceUse = styled.section`
   position: relative;
-
   width: 100%;
   margin-top: 80px;
   @media (max-width: 768px) {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    -ms-flex-pack: center;
     margin: 30px auto;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
     width: 100%;
@@ -265,12 +253,8 @@ export const DivGridServiceUse = styled.div`
   font-family: 'DM Serif Display';
   color: #081f32;
   @media (max-width: 979px) {
-    display: -webkit-box;
-
-    display: -ms-flexbox;
     display: grid;
     margin: 0 auto;
-
     flex-direction: column;
     position: relative;
     width: 100vw;
@@ -280,26 +264,71 @@ export const DivGridServiceUse = styled.div`
       height: 50px;
     }
   }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+    img:first-child {
+      width: 50px;
+      height: 50px;
+    }
+  }
 `
 export const DivCardServiceUse1 = styled.div`
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `
 export const DivCardServiceUse2 = styled.div`
-  height: 415px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 601px) {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+  }
 `
 export const DivCardServiceUse3 = styled.div`
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `
 export const DivCardServiceUse4 = styled.div`
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `
 export const DivCardServiceUse5 = styled.div`
-  height: 415px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 601px) {
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 `
 export const DivCardServiceUse6 = styled.div`
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 600px) {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 `
 export const DivImgServiceUse = styled.div`
   img:first-child {
@@ -319,15 +348,16 @@ export const NameCard = styled.h1`
 export const DescriptionCardServiceUse = styled.p`
   font-size: 11pt;
   color: #6e798c;
-  margin: 15px;
+  margin: 0 15px;
   width: 80%;
+  @media (max-width: 600px) {
+    width: 50%;
+  }
 `
 export const SectionProfessional = styled.section`
   position: relative;
   width: 100%;
-
   font-family: 'Roboto', sans-serif;
-
   @media (max-width: 768px) {
     margin: 0 auto;
     display: flex;
@@ -345,26 +375,32 @@ export const DivGridProfessional = styled.div`
   align-items: center;
   @media (max-width: 979px) {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 80vh;
+  }
+  @media (max-width: 768px) {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 80vh;
   }
 `
 export const DivCardProfessional = styled.div`
   position: relative;
-  width: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 export const DivImgProfessional = styled.div`
   position: relative;
   width: 300px;
   height: 400px;
+  margin: 0 25px;
   img:first-child {
     border-radius: 25px;
   }
   @media (max-width: 600px) {
     position: block;
     width: 300px;
-    height: 260px;
-    transform: translateY(-8px);
   }
 `
 export const DivTextCardProfessional = styled.div`
