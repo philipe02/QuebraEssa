@@ -21,9 +21,15 @@ export const DivCard = styled.div`
   grid-template-columns: 240px 240px 240px 240px;
   text-align: center;
   align-items: center;
+  @media (max-width: 900px) {
+    grid-template-columns: 240px 240px;
+  }
 `
 export const Card = styled.div`
   height: 200px;
+  @media (max-width: 900px) {
+    height: 259px;
+  }
 `
 export const TitleCard = styled.h1`
   color: #212353;
