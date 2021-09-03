@@ -4,13 +4,15 @@ export const Wrapper = styled.main`
   color: #fff;
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  img {
+    object-fit: cover;
+  }
 `
 export const Introducao = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   position: relative;
-  font-family: 'Abhaya Libre ExtraBold';
-  animation: zoom 25s;
   @media (max-width: 768px) {
     margin: 0 auto;
   }
@@ -31,12 +33,13 @@ export const TitleSection = styled.h1`
   margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
 `
 export const Description = styled.h2`
-  font-size: 2rem;
+  font-size: 14pt;
   font-weight: 400;
-  font-family: 'Acme';
+  font-family: 'Roboto';
+  text-align: justify;
+  width: 360px;
 `
 export const Button = styled.button`
   width: 142px;
@@ -55,15 +58,11 @@ export const Button = styled.button`
     color: #fff;
   }
 `
-export const LinkButton = styled.p`
-  color: #fff;
-`
 export const SectionSobre = styled.section`
   position: relative;
   width: 100%;
   height: 400px;
   margin-top: 70px;
-  font-family: 'Roboto', sans-serif;
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
@@ -93,7 +92,8 @@ export const DivImgSobre = styled.div`
 export const DivTextSobre = styled.div`
   float: right;
   width: 420px;
-  margin-left: 50px;
+  text-align: justify;
+  padding: 0px 22px;
 `
 export const TitleSobre = styled.h1`
   font-size: 30px;
@@ -109,7 +109,6 @@ export const DescriptionSobre = styled.h2`
 `
 export const SectionServices = styled.section`
   position: relative;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,7 +121,6 @@ export const TitleService = styled.h1`
   margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
 `
 export const DivGrid = styled.div`
   display: grid;
@@ -150,14 +148,11 @@ export const DivImgIcon = styled.div`
   width: 75px;
   height: 75px;
   img:first-child {
-    background-size: cover;
-    background-position: center;
     object-fit: cover;
   }
 `
 export const NameIcons = styled.p`
   font-size: 12px;
-  font-family: 'Roboto', sans-serif;
   color: rgb(76 72 72);
   margin-top: 10px;
   font-weight: bold;
@@ -250,7 +245,7 @@ export const DivGridServiceUse = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 98rem;
-  font-family: 'DM Serif Display';
+  font-family: 'Roboto';
   color: #081f32;
   @media (max-width: 979px) {
     display: grid;
@@ -285,7 +280,6 @@ export const DivCardServiceUse2 = styled.div`
   flex-direction: column;
 
   @media (min-width: 601px) {
-    margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -348,8 +342,9 @@ export const NameCard = styled.h1`
 export const DescriptionCardServiceUse = styled.p`
   font-size: 11pt;
   color: #6e798c;
-  margin: 0 15px;
-  width: 80%;
+  width: 29rem;
+  text-align: justify;
+  font-family: 'Roboto';
   @media (max-width: 600px) {
     width: 50%;
   }
@@ -357,7 +352,6 @@ export const DescriptionCardServiceUse = styled.p`
 export const SectionProfessional = styled.section`
   position: relative;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
   @media (max-width: 768px) {
     margin: 0 auto;
     display: flex;

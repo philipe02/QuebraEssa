@@ -9,37 +9,32 @@ const Main = () => (
         src="/assets/imgIntroducao.jpg"
         alt="imagem aperto de maos"
         layout="fill"
-        objectFit="cover"
       />
     </S.Introducao>
     <S.DivText>
       <S.Title>Nós te ajudamos a procurar um serviço!.</S.Title>
       <S.Description>
-        O Quebra essa te ajuda a voltar parar o mercado de trabalho. Conheça as
-        oportunidades que nós temos para você.
+        O Quebra Essa possui diversas categorias de serviços para você conhecer.
+        Veja as oportunidades que nós te oferecemos.
       </S.Description>
       <S.Button>
-        <S.LinkButton>
-          <Link href="#about">Ver mais</Link>
-        </S.LinkButton>
+        <Link href="#about">Ver mais</Link>
       </S.Button>
     </S.DivText>
-    <S.SectionSobre>
+    <S.SectionSobre id="about">
       <S.DivSobre>
         <S.DivImgSobre>
           <Image
             src="/assets/sobre/imgSobre.jpg"
             layout="fill"
-            objectFit="cover"
-            alt="imagem sobre"
+            alt="imagem equipe"
           />
         </S.DivImgSobre>
-        <S.DivTextSobre id="about">
-          <S.TitleSobre>O que é o Quebra essa?</S.TitleSobre>
+        <S.DivTextSobre>
+          <S.TitleSobre>O que é o Quebra Essa?</S.TitleSobre>
           <S.DescriptionSobre>
-            Quebra essa é uma empresa de internet brasileira, com sede em
-            Salvador, que tem o intuito em conectar clientes a prestadores de
-            serviços por todo país.
+            Quebra essa é uma empresa brasileira, com sede em Salvador, que tem
+            o intuito em conectar clientes a prestadores de serviços.
           </S.DescriptionSobre>
         </S.DivTextSobre>
       </S.DivSobre>
@@ -47,176 +42,163 @@ const Main = () => (
     <S.SectionServices>
       <S.TitleSection>Todos os serviços</S.TitleSection>
       <S.DivGrid>
-        <Link href="/servico/programador">
+        <a href="/servico/Manicure">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Manicure.png"
                 layout="fill"
-                objectFit="cover"
                 alt="manicure"
               />
             </S.DivImgIcon>
             <S.NameIcons>Manicure</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/programador">
+        </a>
+        <a href="/servico/Programador">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Programador.png"
                 layout="fill"
-                objectFit="cover"
                 alt="programador"
               />
             </S.DivImgIcon>
             <S.NameIcons>Programador</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/jardinagem">
+        </a>
+        <a href="/servico/Jardinagem">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Jardinagem.png"
                 layout="fill"
-                objectFit="cover"
                 alt="jardinagem"
               />
             </S.DivImgIcon>
             <S.NameIcons>Jardinagem</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/mecanico">
+        </a>
+        <a href="/servico/Mecanico">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Mecanico.png"
                 layout="fill"
-                objectFit="cover"
                 alt="mecanico"
               />
             </S.DivImgIcon>
             <S.NameIcons>Mecanico</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/fisioterapia">
+        </a>
+        <a href="/servico/Fisioterapia">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Fisioterapia.png"
                 layout="fill"
-                objectFit="cover"
                 alt="fisioterapia"
               />
             </S.DivImgIcon>
             <S.NameIcons>Fisioterapia</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/arquiteto">
+        </a>
+        <a href="/servico/Arquiteto">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Arquiteto.png"
                 layout="fill"
-                objectFit="cover"
                 alt="arquiteto"
               />
             </S.DivImgIcon>
             <S.NameIcons>Arquiteto</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/fotografo">
+        </a>
+        <a href="/servico/Fotografo">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Fotografo.png"
                 layout="fill"
-                objectFit="cover"
                 alt="fotografo"
               />
             </S.DivImgIcon>
             <S.NameIcons>Fotografo</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/contador">
+        </a>
+        <a href="/servico/Contador">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Contador.png"
                 layout="fill"
-                objectFit="cover"
                 alt="contador"
               />
             </S.DivImgIcon>
             <S.NameIcons>Contador</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/garcom">
+        </a>
+        <a href="/servico/Garcom">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Garcom.png"
                 layout="fill"
-                objectFit="cover"
                 alt="garçom"
               />
             </S.DivImgIcon>
             <S.NameIcons>Garçom</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/esteticista">
+        </a>
+        <a href="/servico/Esteticista">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Esteticista.png"
                 layout="fill"
-                objectFit="cover"
                 alt="esteticista"
               />
             </S.DivImgIcon>
             <S.NameIcons>Esteticista</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/pintor">
+        </a>
+        <a href="/servico/Pintor">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Pintor.png"
                 layout="fill"
-                objectFit="cover"
                 alt="pintor"
               />
             </S.DivImgIcon>
             <S.NameIcons>Pintor</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/engenheiro">
+        </a>
+        <a href="/servico/Engenheiro">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Engenheiro.png"
                 layout="fill"
-                objectFit="cover"
                 alt="engenheiro"
               />
             </S.DivImgIcon>
             <S.NameIcons>Engenheiro</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/motorista">
+        </a>
+        <a href="/servico/Motorista">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
                 src="/assets/iconesServices/Motorista.png"
                 layout="fill"
-                objectFit="cover"
                 alt="motorista"
               />
             </S.DivImgIcon>
             <S.NameIcons>Motorista</S.NameIcons>
           </S.DivIcon>
-        </Link>
-        <Link href="/servico/designergrafico">
+        </a>
+        <a href="/servico/DesignerGrafico">
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
@@ -227,15 +209,14 @@ const Main = () => (
             </S.DivImgIcon>
             <S.NameIcons>Designer grafico</S.NameIcons>
           </S.DivIcon>
-        </Link>
+        </a>
       </S.DivGrid>
     </S.SectionServices>
     <S.SectionOportunidade>
       <Image
         src="/assets/oportunidade.jpg"
         layout="fill"
-        alt="oportunidade"
-        objectFit="cover"
+        alt="aperto de maos"
       />
       <S.DivOportunidade>
         <S.TitleOportunidade>Oportunidades de serviços</S.TitleOportunidade>
@@ -253,7 +234,6 @@ const Main = () => (
             <Image
               src="/assets/usedServices/Manicureservice.jpg"
               layout="fill"
-              objectFit="cover"
               alt="manicure"
             />
           </S.DivImgServiceUse>
@@ -268,7 +248,6 @@ const Main = () => (
             <Image
               src="/assets/usedServices/JardinagemService.jpg"
               layout="fill"
-              objectFit="cover"
               alt="jardinagem"
             />
           </S.DivImgServiceUse>
@@ -283,7 +262,6 @@ const Main = () => (
             <Image
               src="/assets/usedServices/Fotografoservice.jpg"
               layout="fill"
-              objectFit="cover"
               alt="fotografo"
             />
           </S.DivImgServiceUse>
@@ -299,7 +277,6 @@ const Main = () => (
             <Image
               src="/assets/usedServices/DesignerGraficoservice.jpg"
               layout="fill"
-              objectFit="cover"
               alt="designer grafico"
             />
           </S.DivImgServiceUse>
@@ -314,7 +291,6 @@ const Main = () => (
             <Image
               src="/assets/usedServices/ProgramadorService.jpg"
               layout="fill"
-              objectFit="cover"
               alt="programador"
             />
           </S.DivImgServiceUse>
@@ -330,7 +306,6 @@ const Main = () => (
             <Image
               src="/assets/usedServices/PintorService.jpg"
               layout="fill"
-              objectFit="cover"
               alt="pintor"
             />
           </S.DivImgServiceUse>
@@ -350,7 +325,6 @@ const Main = () => (
             <Image
               src="/assets/professional/FisioterapiaProfessional.jpg"
               layout="fill"
-              objectFit="cover"
               alt="fisioterapia"
             />
             <S.DivTextCardProfessional>
@@ -364,7 +338,6 @@ const Main = () => (
             <Image
               src="/assets/professional/MotoristaProfessional.jpg"
               layout="fill"
-              objectFit="cover"
               alt="motorista"
             />
             <S.DivTextCardProfessional>
@@ -378,7 +351,6 @@ const Main = () => (
             <Image
               src="/assets/professional/ManicureProfessional.jpg"
               layout="fill"
-              objectFit="cover"
               alt="manicure"
             />
             <S.DivTextCardProfessional>
