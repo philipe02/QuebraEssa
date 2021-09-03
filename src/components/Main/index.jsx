@@ -33,8 +33,9 @@ const Main = () => (
         <S.DivTextSobre>
           <S.TitleSobre>O que é o Quebra Essa?</S.TitleSobre>
           <S.DescriptionSobre>
-            Quebra essa é uma empresa brasileira, com sede em Salvador, que tem
-            o intuito em conectar clientes a prestadores de serviços.
+            Quebra essa é uma empresa de internet brasileira, com sede em
+            Salvador, que tem o intuito em conectar clientes a prestadores de
+            serviços.
           </S.DescriptionSobre>
         </S.DivTextSobre>
       </S.DivSobre>
@@ -46,7 +47,7 @@ const Main = () => (
           <S.DivIcon>
             <S.DivImgIcon>
               <Image
-                src="/assets/iconesServices/Manicure.png"
+                src="/assets/iconesServices/manicure.png"
                 layout="fill"
                 alt="manicure"
               />
