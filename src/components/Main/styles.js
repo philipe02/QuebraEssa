@@ -22,10 +22,24 @@ export const DivText = styled.div`
   position: absolute;
   top: 30%;
   left: 15%;
+  @media (min-width: 1600px) {
+    width: 789px;
+  }
+  @media (min-width: 900px) and (max-width: 1599px) {
+    width: 720px;
+  }
 `
 export const Title = styled.h1`
   font-size: 60px;
   line-height: 88px;
+  @media (min-width: 1600px) {
+    font-size: 94px;
+    margin: 0px 0px 23px;
+  }
+  @media (min-width: 900px) and (max-width: 1599px) {
+    font-size: 81px;
+    margin: 0px 0px 23px;
+  }
 `
 export const TitleSection = styled.h1`
   font-size: 23px;
@@ -40,6 +54,13 @@ export const Description = styled.h2`
   font-family: 'Roboto';
   text-align: justify;
   width: 360px;
+  @media (min-width: 1600px) {
+    font-size: 17pt;
+  }
+  @media (min-width: 900px) and (max-width: 1599px) {
+    font-size: 13pt;
+    width: 336px;
+  }
 `
 export const Button = styled.button`
   width: 142px;
@@ -56,6 +77,17 @@ export const Button = styled.button`
   }
   a:first-child {
     color: #fff;
+  }
+  @media (min-width: 900px) and (max-width: 1599px) {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    font-size: 21px;
+  }
+  @media (min-width: 1600px) {
+    width: 166px;
+    height: 62px;
+    font-size: 26px;
   }
 `
 export const SectionSobre = styled.section`
