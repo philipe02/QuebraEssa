@@ -41,7 +41,7 @@ const Main = () => (
       </S.DivSobre>
     </S.SectionSobre>
     <S.SectionServices>
-      <S.TitleSection>Todos os serviços</S.TitleSection>
+      <S.TitleSection id="services">Todos os serviços</S.TitleSection>
       <S.DivGrid>
         <a href="/servico/Manicure">
           <S.DivIcon>
@@ -228,7 +228,7 @@ const Main = () => (
       </S.DivOportunidade>
     </S.SectionOportunidade>
     <S.SectionServiceUse>
-      <S.TitleSection>Serviços mais usados</S.TitleSection>
+      <S.TitleSection id="allServices">Serviços mais usados</S.TitleSection>
       <S.DivGridServiceUse>
         <S.DivCardServiceUse1>
           <S.DivImgServiceUse>
@@ -319,7 +319,9 @@ const Main = () => (
       </S.DivGridServiceUse>
     </S.SectionServiceUse>
     <S.SectionProfessional>
-      <S.TitleSection>Alguns dos nossos profissionais</S.TitleSection>
+      <S.TitleSection id="professionals">
+        Alguns dos nossos profissionais
+      </S.TitleSection>
       <S.DivGridProfessional>
         <S.DivCardProfessional>
           <S.DivImgProfessional>
