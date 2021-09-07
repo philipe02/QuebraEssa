@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.footer`
+  min-height: 20%;
+  position: relative;
   width: 100%;
   padding: 6rem 0rem 0rem 0rem;
   display: flex;
@@ -9,21 +11,44 @@ export const Wrapper = styled.footer`
   align-items: center;
   justify-content: center;
 `
-export const LogoTipo = styled.div`
+export const Logo = styled.img`
   position: relative;
   width: 199.37px;
   height: 60.78px;
   margin-bottom: 40px;
   object-fit: cover;
 `
+
+export const DivContainer = styled.div`
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+`
 export const DivCard = styled.div`
-  display: grid;
-  grid-template-columns: 240px 240px 240px 240px;
   text-align: center;
   align-items: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 900px) {
+    grid-template-columns: 240px 240px;
+  }
+  @media (max-width: 900px) {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: 240px 240px;
+  }
 `
 export const Card = styled.div`
   height: 200px;
+  margin: 0px 33px;
+  @media (max-width: 900px) {
+    height: 259px;
+  }
 `
 export const TitleCard = styled.h1`
   color: #212353;
