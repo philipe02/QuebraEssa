@@ -41,7 +41,7 @@ const Pesquisar = () => {
       setFornecedores(fornecedoresInicial)
       return
     }
-    let fornecedoresAtualizado = fornecedores.filter(
+    let fornecedoresAtualizado = fornecedoresInicial.filter(
       (fornecedor) => filtros.servico === fornecedor.servico.titulo
     )
     setFornecedores(fornecedoresAtualizado)
@@ -53,6 +53,7 @@ const Pesquisar = () => {
       filtroFormatado = { ...filtroFormatado, [filtro]: router.query[filtro] }
     })
     setFiltros(filtroFormatado)
+    atualizarLista()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query])
 
