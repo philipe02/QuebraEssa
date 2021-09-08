@@ -5,6 +5,7 @@ export const Wrapper = styled.main`
   overflow-x: hidden;
   overflow-y: hidden;
   font-family: 'Poppins', sans-serif;
+
   img {
     object-fit: cover;
   }

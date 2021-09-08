@@ -31,6 +31,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/styled-components": "^5.1.12",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
@@ -40,8 +41,11 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.2",
     "jest": "^27.0.6",
+    "leaflet": "^1.7.1",
     "lint-staged": "^11.1.2",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "react-leaflet": "^3.2.1",
+    "react-toastify": "^8.0.2"
   },
   "resolutions": {
     "styled-components": "^5"

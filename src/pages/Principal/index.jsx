@@ -1,15 +1,13 @@
 import * as S from './styles'
-import ContainerRequisitados from '../ContainerRequisitados'
-import ContainerRegister from '../ContainerRegister'
 
-const Main = () => (
+const Principal = () => (
   <S.Wrapper>
     <S.DivIntroducao>
       <S.TextIntroducao>
         Facilidade no seu dia a dia. O que você precisa está aqui.
       </S.TextIntroducao>
     </S.DivIntroducao>
-    <section className="mt-5 mb-5">
+    <section>
       <S.DivGridContrate>
         <div>
           <S.TextHelp>
@@ -21,9 +19,7 @@ const Main = () => (
         </div>
       </S.DivGridContrate>
     </section>
-    <ContainerRequisitados />
-    <ContainerRegister />
-    <S.SectionRecomendacoes className="container">
+    <S.SectionRecomendacoes className="container mt-5 mb-5">
       <S.Title className="mb-5 h1 text-center">Nossas recomendações</S.Title>
       <S.DivEfeito></S.DivEfeito>
       <S.DivRecomendacoes>
@@ -53,7 +49,7 @@ const Main = () => (
         <S.DivEfeito2></S.DivEfeito2>
       </S.DivRecomendacoes>
     </S.SectionRecomendacoes>
-    <S.SectionDepoimentos className="mt-5 mb-5">
+    <S.SectionDepoimentos className="mb-5">
       <S.Title className="text-center mb-5">Descubra coisas para fazer</S.Title>
       <S.DivGridDepoimentos>
         <S.DivCardDepoimentos>
@@ -79,4 +75,4 @@ const Main = () => (
   </S.Wrapper>
 )
 
-export default Main
+export default Principal
