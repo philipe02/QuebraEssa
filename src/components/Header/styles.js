@@ -92,6 +92,53 @@ export const Search = styled.input`
     outline: none;
   }
 `
+export const AmigosContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+export const AmigosImg = styled.img`
+  height: 4rem;
+  object-fit: contain;
+`
+export const AmigosLabel = styled.label`
+  padding: 1rem;
+  font-size: medium;
+`
+export const UserHeader = styled.div`
+  display: flex;
+  margin-left: auto;
+  margin-right: 2rem;
+  align-items: center;
+  position: relative;
+`
+export const UserLabel = styled.label`
+  padding: 1rem;
+  margin: 0 2rem;
+  font-size: medium;
+  font-family: 'Poppins';
+`
+export const UserPhoto = styled.img`
+  height: 4rem;
+  object-fit: contain;
+  border-radius: 50%;
+`
+export const UserMenu = styled.div`
+  position: absolute;
+  z-index: 100;
+  margin-top: 2rem;
+  margin-left: -2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem 0;
+`
+export const UserOption = styled.a`
+  :visited,
+  :hover,
+  :active {
+    color: #000;
+  }
+`
+
 export const Login = styled.div`
   display: flex;
   height: fit-content;

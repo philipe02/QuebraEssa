@@ -1,22 +1,33 @@
 import * as S from './styles'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { getAllServicos } from 'service/servicos'
 import { useRouter } from 'next/router'
+import { UserContext, userInitialState, userTeste } from 'context/UserContext'
 
 const Header = () => {
   const [servicosMenu, setServicosMenu] = useState(false)
+  const [userMenu, setUserMenu] = useState(false)
   const [pesquisa, setPesquisa] = useState('')
   const [servicos, setServicos] = useState()
+  const [usuario, setUsuario] = useContext(UserContext)
   const router = useRouter()
 
   const abrirServicosMenu = () => setServicosMenu(true)
   const fecharServicosMenu = () => setServicosMenu(false)
+  const toggleUserMenu = () => setUserMenu(!userMenu)
 
   const handleSearch = () => {
     pesquisa && router.push(`/Search?query=${pesquisa}`)
   }
   const handleChangePesquisa = ({ target }) => setPesquisa(target.value)
+  const logarUsuario = () => {
+    if (usuario.id) {
+      setUsuario(userInitialState)
+      return
+    }
+    setUsuario(userTeste)
+  }
 
   useEffect(() => console.log(pesquisa), [pesquisa])
   useEffect(() => {
@@ -64,14 +75,34 @@ const Header = () => {
         />
         <S.SearchIcon src="/assets/searchicon.svg" onClick={handleSearch} />
       </S.SearchContainer>
-      <S.Login>
-        <Link href="/Login">
-          <S.Signin id="entrarBtn">Entrar</S.Signin>
-        </Link>
-        <Link href="/Register">
-          <S.Register id="registrarBtn">Registre-se</S.Register>
-        </Link>
-      </S.Login>
+      {usuario.id && (
+        <S.AmigosContainer>
+          <S.AmigosImg src="/assets/imgAddAmigos.png" />
+          <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
+        </S.AmigosContainer>
+      )}
+      {usuario.id ? (
+        <S.UserHeader onClick={toggleUserMenu}>
+          <S.UserLabel>{`${usuario['first-name']} ${usuario['last-name']}`}</S.UserLabel>
+          <S.UserPhoto src="https://picsum.photos/200"></S.UserPhoto>
+          {userMenu && (
+            <S.UserMenu>
+              <S.UserOption onClick={logarUsuario}>Sair</S.UserOption>
+            </S.UserMenu>
+          )}
+        </S.UserHeader>
+      ) : (
+        <S.Login>
+          <Link href="#">
+            <S.Signin id="entrarBtn" onClick={logarUsuario}>
+              Entrar
+            </S.Signin>
+          </Link>
+          <Link href="/Register">
+            <S.Register id="registrarBtn">Registre-se</S.Register>
+          </Link>
+        </S.Login>
+      )}
     </S.Wrapper>
   )
 }
