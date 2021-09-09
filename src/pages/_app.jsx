@@ -1,12 +1,13 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import { UserProvider } from 'context/UserContext'
 import Head from 'next/head'
 
 import GlobalStyles from 'styles/global'
 
 function App({ Component, pageProps }) {
   return (
-    <>
+    <UserProvider>
       <Head>
         <title>Quebra Essa</title>
         <meta
@@ -18,7 +19,7 @@ function App({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </UserProvider>
   )
 }
 

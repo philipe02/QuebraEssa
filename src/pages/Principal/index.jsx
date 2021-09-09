@@ -1,4 +1,5 @@
 import * as S from './styles'
+import Indicacoes from '../../components/Indicacoes'
 
 const Principal = () => (
   <S.Wrapper>
@@ -7,7 +8,7 @@ const Principal = () => (
         Facilidade no seu dia a dia. O que você precisa está aqui.
       </S.TextIntroducao>
     </S.DivIntroducao>
-    <section>
+    <section className="mt-5">
       <S.DivGridContrate>
         <div>
           <S.TextHelp>
@@ -19,6 +20,8 @@ const Principal = () => (
         </div>
       </S.DivGridContrate>
     </section>
+    <Indicacoes />
+
     <S.SectionRecomendacoes className="container mt-5 mb-5">
       <S.Title className="mb-5 h1 text-center">Nossas recomendações</S.Title>
       <S.DivEfeito></S.DivEfeito>
@@ -26,6 +29,7 @@ const Principal = () => (
         <div>
           <S.ImgRecomendacoes src="/assets/sobre/imgSobre.jpg" />
         </div>
+
         <S.DivIndicacoes>
           <S.Title className="text-center font-weight-bold">Indicações</S.Title>
           <p className="h2 font-weight-bold text-center">
@@ -49,6 +53,7 @@ const Principal = () => (
         <S.DivEfeito2></S.DivEfeito2>
       </S.DivRecomendacoes>
     </S.SectionRecomendacoes>
+
     <S.SectionDepoimentos className="mb-5">
       <S.Title className="text-center mb-5">Descubra coisas para fazer</S.Title>
       <S.DivGridDepoimentos>
