@@ -40,6 +40,12 @@ export const imgRegistrar = styled.img`
     bottom: 0;
     right: 13rem;
   }
+  @media (min-width: 1350px) {
+    width: 24%;
+  }
+  @media (min-width: 1686px) {
+    width: 17%;
+  }
 `
 export const DivContainerRegister = styled.div`
   margin: 25px 25px 0px 25px;
