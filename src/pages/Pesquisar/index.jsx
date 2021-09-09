@@ -1,4 +1,5 @@
 import Filtros from 'components/Filtros'
+import IntroBanner from 'components/IntroBanner'
 import Listagem from 'components/Listagem'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -9,13 +10,15 @@ const fornecedoresInicial = [
     id: 1,
     nome: 'José',
     servico: { titulo: 'Marceneiro' },
-    desc: 'Manicure profissional'
+    desc: 'Manicure profissional',
+    aval: 4
   },
   {
     id: 2,
     nome: 'Maria',
     servico: { titulo: 'Motorista' },
-    desc: 'Motorista profissional'
+    desc: 'Motorista profissional',
+    aval: 3
   }
 ]
 const filtrosInicial = {
@@ -58,13 +61,16 @@ const Pesquisar = () => {
   }, [router.query])
 
   return (
-    <S.Wrapper>
-      <Filtros
-        handleChange={handleChangeFiltros}
-        atualizarLista={atualizarLista}
-      />
-      <Listagem filter={filtros} fornecedores={fornecedores} />
-    </S.Wrapper>
+    <>
+      <IntroBanner />
+      <S.Wrapper>
+        <Filtros
+          handleChange={handleChangeFiltros}
+          atualizarLista={atualizarLista}
+        />
+        <Listagem filter={filtros} fornecedores={fornecedores} />
+      </S.Wrapper>
+    </>
   )
 }
 
