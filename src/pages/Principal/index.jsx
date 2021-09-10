@@ -1,5 +1,5 @@
 import * as S from './styles'
-import Indicacoes from '../../components/Indicacoes'
+import Indicacoes from 'components/Indicacoes'
 
 const Principal = () => (
   <S.Wrapper>
