@@ -13,20 +13,26 @@ const Listagem = ({ fornecedores }) => {
                   className="foto"
                   src="https://picsum.photos/200"
                 />
-                <S.FornecedorDadosContainer>
-                  <S.FornecedorNome className="nome">
-                    {fornecedor.nome}
-                  </S.FornecedorNome>
-                  <S.FornecedorServico className="servico">
-                    {fornecedor.servico.titulo}
-                  </S.FornecedorServico>
-                  <S.FornecedorDescricao className="descricao">
-                    {fornecedor.desc}
-                  </S.FornecedorDescricao>
-                  <S.FornecedorAvaliacao className="avaliacao">
-                    {fornecedor.aval}
-                  </S.FornecedorAvaliacao>
-                </S.FornecedorDadosContainer>
+                <S.FornecedorConteudoContainer>
+                  <S.FornecedorDadosContainer>
+                    <S.FornecedorNome className="nome">
+                      {fornecedor.nome}
+                    </S.FornecedorNome>
+                    <S.FornecedorServico className="servico">
+                      {fornecedor.servico.titulo}
+                    </S.FornecedorServico>
+                    <S.FornecedorDescricao className="descricao">
+                      {fornecedor.desc}
+                    </S.FornecedorDescricao>
+                  </S.FornecedorDadosContainer>
+                  <S.FornecedorAvaliacaoContainer>
+                    Nota:
+                    <S.FornecedorAvaliacao className="avaliacao">
+                      <strong>{fornecedor.aval.toFixed(1)}</strong>
+                    </S.FornecedorAvaliacao>
+                    <S.FornecedorQtdAvaliacao>{`(0)`}</S.FornecedorQtdAvaliacao>
+                  </S.FornecedorAvaliacaoContainer>
+                </S.FornecedorConteudoContainer>
               </S.FornecedorContainer>
             )
           })

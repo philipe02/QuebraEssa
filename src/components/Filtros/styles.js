@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   border-radius: 2rem;
   background-color: #fff;
   border: 1px solid #e6e6f0;
+  box-shadow: 0 0 10px #777;
 `
 
 export const Title = styled.h1`

@@ -11,14 +11,28 @@ const fornecedoresInicial = [
     nome: 'José',
     servico: { titulo: 'Marceneiro' },
     desc: 'Manicure profissional',
-    aval: 4
+    aval: 3
   },
   {
     id: 2,
     nome: 'Maria',
     servico: { titulo: 'Motorista' },
     desc: 'Motorista profissional',
-    aval: 3
+    aval: 7
+  },
+  {
+    id: 3,
+    nome: 'Rodrigo',
+    servico: { titulo: 'Backend' },
+    desc: 'Programador profissional',
+    aval: 9
+  },
+  {
+    id: 4,
+    nome: 'João Vitor',
+    servico: { titulo: 'Frontend' },
+    desc: 'Programador profissional',
+    aval: 10
   }
 ]
 const filtrosInicial = {
