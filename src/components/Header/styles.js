@@ -62,6 +62,7 @@ export const SubMenuItem = styled.a`
 `
 export const DropDown = styled.div`
   position: absolute;
+  z-index: 100;
   margin-top: 2rem;
   margin-left: -2rem;
   background-color: #fff;

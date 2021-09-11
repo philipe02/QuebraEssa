@@ -18,7 +18,7 @@ const Header = () => {
   const toggleUserMenu = () => setUserMenu(!userMenu)
 
   const handleSearch = () => {
-    pesquisa && router.push(`/Search?query=${pesquisa}`)
+    pesquisa && router.push(`/Pesquisar?search=${pesquisa}`)
   }
   const handleChangePesquisa = ({ target }) => setPesquisa(target.value)
   const logarUsuario = () => {
@@ -29,7 +29,7 @@ const Header = () => {
     setUsuario(userTeste)
   }
 
-  useEffect(() => console.log(pesquisa), [pesquisa])
+  useEffect(() => console.log(servicos, servicosMenu), [servicos, servicosMenu])
   useEffect(() => {
     getAllServicos().then(({ data }) => {
       setServicos(data)
@@ -54,7 +54,7 @@ const Header = () => {
                 servicos.map((servico) => (
                   <Link
                     key={servico.titulo}
-                    href={`/Search?servico=${servico.titulo}`}
+                    href={`/Pesquisar?servico=${servico.titulo}`}
                     passHref
                     className="submenuItem"
                   >
