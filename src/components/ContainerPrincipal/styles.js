@@ -5,6 +5,7 @@ export const Wrapper = styled.main`
   overflow-x: hidden;
   overflow-y: hidden;
   font-family: 'Poppins', sans-serif;
+
   img {
     object-fit: cover;
   }
@@ -46,6 +47,11 @@ export const TextHelp = styled.h1`
     font-size: 17pt;
   }
 `
+// export const DivIndicacoesFuncionario = styled.div`
+//       display: flex;
+//     justify-content: center;
+//     align-items: center;
+// `
 export const SectionRecomendacoes = styled.section`
   width: 67%;
   position: relative;
