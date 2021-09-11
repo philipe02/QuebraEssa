@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   background-color: #fff;
   border: 1px solid #e6e6f0;
   height: fit-content;
-  box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #777;
 `
 export const Title = styled.div`
   width: 100%;

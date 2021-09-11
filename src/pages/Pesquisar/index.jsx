@@ -1,9 +1,7 @@
-import Filtros from 'components/Filtros'
 import IntroBanner from 'components/IntroBanner'
-import Listagem from 'components/Listagem'
+import PesquisaFornecedores from 'containers/PesquisaFornecedores'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import * as S from './styles'
 
 const fornecedoresInicial = [
   {
@@ -77,13 +75,12 @@ const Pesquisar = () => {
   return (
     <>
       <IntroBanner />
-      <S.Wrapper>
-        <Filtros
-          handleChange={handleChangeFiltros}
-          atualizarLista={atualizarLista}
-        />
-        <Listagem filter={filtros} fornecedores={fornecedores} />
-      </S.Wrapper>
+      <PesquisaFornecedores
+        handleChangeFiltros={handleChangeFiltros}
+        atualizarLista={atualizarLista}
+        filtros={filtros}
+        fornecedores={fornecedores}
+      />
     </>
   )
 }
