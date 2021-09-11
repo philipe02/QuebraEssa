@@ -1,9 +1,10 @@
 import ContainerPrincipal from 'components/ContainerPrincipal'
+const Principal = () => <ContainerPrincipal />
 
-export default function Principal() {
-  return (
-    <>
-      <ContainerPrincipal />
-    </>
-  )
+export async function getServerSideProps() {
+  await new Promise((resolve) => {
+    setTimeout(resolve, 100)
+  })
+  return { props: {} }
 }
+export default Principal
