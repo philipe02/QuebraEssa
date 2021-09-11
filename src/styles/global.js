@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
   html{
     font-size: 62.5%;
+    
   }
 
   body{
@@ -18,6 +19,9 @@ const GlobalStyles = createGlobalStyle`
   html, body, #__next{
     min-height:100%;
     height: 100%;
+  }
+  a {
+    text-decoration: none;
   }
 `
 
