@@ -94,6 +94,7 @@ export const Search = styled.input`
   }
 `
 export const AmigosContainer = styled.div`
+  cursor: pointer;
   display: flex;
   align-items: center;
 `

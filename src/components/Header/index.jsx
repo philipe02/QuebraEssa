@@ -76,10 +76,12 @@ const Header = () => {
         <S.SearchIcon src="/assets/searchicon.svg" onClick={handleSearch} />
       </S.SearchContainer>
       {usuario.id && (
-        <S.AmigosContainer>
-          <S.AmigosImg src="/assets/imgAddAmigos.png" />
-          <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
-        </S.AmigosContainer>
+        <Link href="/Principal/BuscarAmigos">
+          <S.AmigosContainer>
+            <S.AmigosImg src="/assets/imgAddAmigos.png" />
+            <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
+          </S.AmigosContainer>
+        </Link>
       )}
       {usuario.id ? (
         <S.UserHeader onClick={toggleUserMenu}>
@@ -87,13 +89,15 @@ const Header = () => {
           <S.UserPhoto src="https://picsum.photos/200"></S.UserPhoto>
           {userMenu && (
             <S.UserMenu>
-              <S.UserOption onClick={logarUsuario}>Sair</S.UserOption>
+              <Link href="/">
+                <S.UserOption onClick={logarUsuario}>Sair</S.UserOption>
+              </Link>
             </S.UserMenu>
           )}
         </S.UserHeader>
       ) : (
         <S.Login>
-          <Link href="#">
+          <Link href="/Principal">
             <S.Signin id="entrarBtn" onClick={logarUsuario}>
               Entrar
             </S.Signin>
