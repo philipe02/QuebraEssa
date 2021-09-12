@@ -9,7 +9,7 @@ const Header = () => {
   const [servicosMenu, setServicosMenu] = useState(false)
   const [userMenu, setUserMenu] = useState(false)
   const [pesquisa, setPesquisa] = useState('')
-  const [servicos, setServicos] = useState()
+  const [servicos, setServicos] = useState([])
   const [usuario, setUsuario] = useContext(UserContext)
   const router = useRouter()
 
@@ -48,19 +48,18 @@ const Header = () => {
         </Link>
         <S.MenuItem id="servicoLink" onMouseEnter={abrirServicosMenu}>
           Serviços
-          {servicos && servicosMenu && (
+          {servicos.length > 0 && servicosMenu && (
             <S.DropDown id="dropdownServico" onMouseLeave={fecharServicosMenu}>
-              {servicos &&
-                servicos.map((servico) => (
-                  <Link
-                    key={servico.titulo}
-                    href={`/Pesquisar?servico=${servico.titulo}`}
-                    passHref
-                    className="submenuItem"
-                  >
-                    <S.SubMenuItem>{servico.titulo}</S.SubMenuItem>
-                  </Link>
-                ))}
+              {servicos.map((servico) => (
+                <Link
+                  key={servico.titulo}
+                  href={`/Pesquisar?servico=${servico.titulo}`}
+                  passHref
+                  className="submenuItem"
+                >
+                  <S.SubMenuItem>{servico.titulo}</S.SubMenuItem>
+                </Link>
+              ))}
             </S.DropDown>
           )}
         </S.MenuItem>
