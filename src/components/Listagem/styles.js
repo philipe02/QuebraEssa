@@ -20,14 +20,10 @@ export const Title = styled.div`
   font-size: 3rem;
 `
 export const ListaContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(208px, 1fr));
-  gap: 1rem;
   margin-top: 1rem;
 `
 export const FornecedorContainer = styled.div`
   font-family: 'Poppins';
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,20 +38,24 @@ export const FornecedorContainer = styled.div`
   transition: box-shadow 200ms ease 0s;
 `
 export const FornecedorConteudoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-`
-export const FornecedorDadosContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   width: 100%;
+  padding-right: 6rem;
 `
+
 export const FornecedorAvaliacaoContainer = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  background-color: lightgreen;
+  background-color: ${(props) => {
+    if (props.nota <= 2) return 'indianred'
+    if (props.nota > 2 && props.nota < 4) return 'yellow'
+    return 'lightgreen'
+  }};
   font-size: 1.5rem;
   width: 6rem;
   height: 100%;

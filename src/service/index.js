@@ -9,3 +9,17 @@ export default axios.create({
     'Content-type': 'application/json'
   }
 })
+
+export function prepararUrl(path, params) {
+  let url = path
+  if (params) {
+    url += '?'
+    Object.keys(params).forEach((chave, index) => {
+      if (params[chave]) {
+        let paramUrlAux = index === 0 ? '' : '&'
+        url += `${paramUrlAux}${chave}=${params[chave]}`
+      }
+    })
+  }
+  return url
+}

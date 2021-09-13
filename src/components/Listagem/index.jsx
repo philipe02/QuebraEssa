@@ -1,39 +1,50 @@
+import router from 'next/router'
 import * as S from './styles'
 
-const Listagem = ({ fornecedores }) => {
+const Listagem = ({ fornecedores, loading }) => {
   return (
     <S.Wrapper>
       <S.Title>Listagem</S.Title>
-      <S.ListaContainer>
-        {fornecedores.length ? (
+      <S.ListaContainer className="row">
+        {loading ? (
+          <div className="spinner-border" role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
+        ) : fornecedores.length ? (
           fornecedores.map((fornecedor) => {
             return (
-              <S.FornecedorContainer key={fornecedor.id}>
-                <S.FornecedorFoto
-                  className="foto"
-                  src="https://picsum.photos/200"
-                />
-                <S.FornecedorConteudoContainer>
-                  <S.FornecedorDadosContainer>
+              <div key={fornecedor.id} className="col mb-4">
+                <S.FornecedorContainer
+                  className="card"
+                  onClick={() =>
+                    router.push(`/DetalheFornecedor/${fornecedor.id}`)
+                  }
+                >
+                  <S.FornecedorFoto
+                    className="foto card-img-top"
+                    src="https://picsum.photos/200"
+                  />
+                  <S.FornecedorConteudoContainer className="card-body">
                     <S.FornecedorNome className="nome">
                       {fornecedor.nome}
                     </S.FornecedorNome>
                     <S.FornecedorServico className="servico">
-                      {fornecedor.servico.titulo}
+                      {fornecedor.servico}
                     </S.FornecedorServico>
                     <S.FornecedorDescricao className="descricao">
-                      {fornecedor.desc}
+                      {fornecedor.descricao}
                     </S.FornecedorDescricao>
-                  </S.FornecedorDadosContainer>
-                  <S.FornecedorAvaliacaoContainer>
-                    Nota:
-                    <S.FornecedorAvaliacao className="avaliacao">
-                      <strong>{fornecedor.aval.toFixed(1)}</strong>
-                    </S.FornecedorAvaliacao>
-                    <S.FornecedorQtdAvaliacao>{`(0)`}</S.FornecedorQtdAvaliacao>
-                  </S.FornecedorAvaliacaoContainer>
-                </S.FornecedorConteudoContainer>
-              </S.FornecedorContainer>
+
+                    <S.FornecedorAvaliacaoContainer nota={fornecedor.nota}>
+                      Nota:
+                      <S.FornecedorAvaliacao className="avaliacao">
+                        <strong>{fornecedor.nota.toFixed(1)}</strong>
+                      </S.FornecedorAvaliacao>
+                      <S.FornecedorQtdAvaliacao>{`(${fornecedor.qtdVotos})`}</S.FornecedorQtdAvaliacao>
+                    </S.FornecedorAvaliacaoContainer>
+                  </S.FornecedorConteudoContainer>
+                </S.FornecedorContainer>
+              </div>
             )
           })
         ) : (

@@ -1,17 +1,23 @@
+import { useEffect, useState } from 'react'
+import { getAllServicos } from 'service/servicos'
 import * as S from './styles'
 
-const servicos = [{ titulo: 'Marceneiro' }, { titulo: 'Motorista' }]
-
 const Filtros = ({ handleChange, atualizarLista }) => {
+  const [servicos, setServicos] = useState([])
   const limparFiltros = () => {
     document.querySelector('[name=servico]').value = ''
-    document.querySelector('[name=fornecedor]').value = ''
+    document.querySelector('[name=nome]').value = ''
     document.querySelector('[name=avaliacao]').value = ''
     atualizarLista(true)
   }
   const numberFormatter = ({ target }) => {
     target.value = target.value.replace(/[^0-9]/g, '')
   }
+  useEffect(() => {
+    getAllServicos().then(({ data }) => {
+      setServicos(data.content)
+    })
+  }, [])
   /*  useEffect(() => {
     const ratingStars = [...document.getElementsByClassName('rating__star')]
     executeRating(ratingStars)
@@ -59,20 +65,20 @@ const Filtros = ({ handleChange, atualizarLista }) => {
         <S.FormLabel>Fornecedor</S.FormLabel>
         <S.Input
           className="form-control"
-          name="fornecedor"
+          name="nome"
           placeholder="Insira o nome do fornecedor"
           onChange={handleChange}
         />
       </S.FormContainer>
       <S.FormContainer>
-        <S.FormLabel>Avaliação mínima</S.FormLabel>
+        <S.FormLabel>Nota mínima</S.FormLabel>
         <S.Input
           className="form-control avaliacao"
           name="avaliacao"
-          pattern="[0-9]{2}"
-          placeholder="0 a 10"
+          pattern="[0-9]{1}"
+          placeholder="0 a 5"
           onInput={numberFormatter}
-          maxLength="2"
+          maxLength="1"
           onChange={handleChange}
         />
       </S.FormContainer>
