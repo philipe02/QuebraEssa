@@ -38,10 +38,12 @@ export const MenuItem = styled.a`
   }
   :visited,
   :hover,
+  :focus,
   :active {
     color: #000;
   }
 `
+export const MenuDropdown = styled.div``
 export const SubMenuItem = styled.a`
   margin: 1rem;
   padding: 1rem 2rem;
@@ -61,15 +63,11 @@ export const SubMenuItem = styled.a`
   }
 `
 export const DropDown = styled.div`
-  position: absolute;
-  z-index: 100;
   margin-top: 2rem;
   margin-left: -2rem;
   background-color: #fff;
   border-radius: 1rem;
   padding: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   transition: opacity 1s ease;
 `
 export const SearchContainer = styled.div`
@@ -106,7 +104,7 @@ export const AmigosLabel = styled.label`
   padding: 1rem;
   font-size: medium;
 `
-export const UserHeader = styled.div`
+export const UserHeader = styled.a`
   display: flex;
   margin-left: auto;
   margin-right: 2rem;
@@ -114,8 +112,8 @@ export const UserHeader = styled.div`
   position: relative;
 `
 export const UserLabel = styled.label`
+  cursor: pointer;
   padding: 1rem;
-  margin: 0 2rem;
   font-size: medium;
   font-family: 'Poppins';
 `
@@ -125,19 +123,35 @@ export const UserPhoto = styled.img`
   border-radius: 50%;
 `
 export const UserMenu = styled.div`
-  position: absolute;
-  z-index: 100;
-  margin-top: 2rem;
-  margin-left: -2rem;
   background-color: #fff;
   border-radius: 1rem;
-  padding: 2rem 0;
+`
+export const UserBtn = styled.button`
+  background-color: #fff;
+  color: #000;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  :hover,
+  :focus,
+  :active {
+    box-shadow: none;
+    color: #000;
+    background-color: #ededed;
+  }
 `
 export const UserOption = styled.a`
+  margin-left: 1rem;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  width: 100%;
+  color: #000;
+  padding-right: 5rem;
   :visited,
   :hover,
   :active {
     color: #000;
+    background-color: #ededed;
   }
 `
 

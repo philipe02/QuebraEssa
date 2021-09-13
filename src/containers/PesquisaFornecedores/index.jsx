@@ -3,18 +3,20 @@ import Filtros from 'components/Filtros'
 import Listagem from 'components/Listagem'
 
 const PesquisaFornecedores = ({
+  loading,
   handleChangeFiltros,
   atualizarLista,
-  filtros,
-  fornecedores
+  fornecedores,
+  resetFilters
 }) => {
   return (
     <S.Wrapper>
       <Filtros
         handleChange={handleChangeFiltros}
         atualizarLista={atualizarLista}
+        resetFilters={resetFilters}
       />
-      <Listagem filter={filtros} fornecedores={fornecedores} />
+      <Listagem loading={loading} fornecedores={fornecedores} />
     </S.Wrapper>
   )
 }

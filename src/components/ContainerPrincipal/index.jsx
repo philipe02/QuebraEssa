@@ -16,12 +16,11 @@ const Principal = () => (
           </S.TextHelp>
         </div>
         <div>
-          <S.Logo src="/assets/imgIntroducao.png" />
+          <S.Logo src="/assets/usedServices/imgIntroducao.png" />
         </div>
       </S.DivGridContrate>
     </section>
     <Indicacoes />
-
     <S.SectionRecomendacoes className="container mt-5 mb-5">
       <S.Title className="mb-5 h1 text-center">Nossas recomendações</S.Title>
       <S.DivEfeito></S.DivEfeito>
@@ -32,7 +31,7 @@ const Principal = () => (
 
         <S.DivIndicacoes>
           <S.Title className="text-center font-weight-bold">Indicações</S.Title>
-          <p className="h2 font-weight-bold text-center">
+          <p className="h3 text-center">
             Para uma melhor experiencia indique os serviços aos seus amigos.
           </p>
         </S.DivIndicacoes>
