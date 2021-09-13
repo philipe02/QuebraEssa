@@ -32,11 +32,7 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&display=swap"
             rel="stylesheet"
@@ -47,6 +43,8 @@ export default class MyDocument extends Document {
             integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
             crossOrigin="anonymous"
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link
             rel="stylesheet"
             href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -62,15 +60,6 @@ export default class MyDocument extends Document {
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
             integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
             crossOrigin="anonymous"
-          ></script>
-          <script src="https://use.fontawesome.com/012614a952.js"></script>
-          <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
-          ></script>
-          <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.15.1/js/v4-shims.js"
           ></script>
         </Head>
         <body>
