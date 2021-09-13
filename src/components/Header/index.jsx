@@ -75,12 +75,17 @@ const Header = () => {
         <S.SearchIcon src="/assets/searchicon.svg" onClick={handleSearch} />
       </S.SearchContainer>
       {usuario.id && (
-        <Link href="/Principal/BuscarAmigos">
-          <S.AmigosContainer>
-            <S.AmigosImg src="/assets/imgAddAmigos.png" />
-            <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
-          </S.AmigosContainer>
-        </Link>
+        <div className="d-flex">
+          {/* <Link href="/Principal/Amigos">
+            <S.AmigosImg src="/assets/iconAmigos.png" />
+          </Link> */}
+          <Link href="/Principal/BuscarAmigos">
+            <S.AmigosContainer>
+              <S.AmigosImg src="/assets/imgAddAmigos.png" />
+              <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
+            </S.AmigosContainer>
+          </Link>
+        </div>
       )}
       {usuario.id ? (
         <S.UserHeader onClick={toggleUserMenu}>

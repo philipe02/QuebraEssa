@@ -1,41 +1,37 @@
 import styled from 'styled-components'
 
-export const WrapperSearchFriends = styled.section`
+export const WrapperDetalheAmigo = styled.section`
   width: 100%;
   font-family: 'poppins', sans-serif;
-  z-index: 1;
 `
-export const DivBuscarAmigos = styled.div`
-  background-color: #774fd1;
-  background-position: top;
-  display: flex;
-  flex-direction: column;
-  height: 35rem;
-  position: relative;
-`
-export const DivVoltar = styled.div`
-  cursor: pointer;
-  width: 90%;
-  margin: 0 auto;
+export const DivDetalhesAmigos = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.6rem 0;
-`
-export const DivContainer = styled.div`
+  justify-content: center;
   width: 100%;
-  height: 100vh;
-  margin: ;
+  height: 30rem;
+  background-color: #774fd1;
+`
+export const DivVoltar = styled.div`
+  margin: 0 0 20rem;
+  width: 90%;
 `
 export const DivBlocoImg = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 40px auto;
 `
 export const Name = styled.h1`
   text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20pt;
+`
+export const NamePost = styled.h1`
+  /* text-align: center; */
   font-size: 13pt;
+  color: #000;
+  margin: 0px 25px;
 `
 export const ImgAmigo = styled.img`
   width: 150px;
@@ -43,95 +39,42 @@ export const ImgAmigo = styled.img`
   border-radius: 20%;
   display: block;
   object-fit: cover;
+  margin: 0 auto;
 `
-export const ButtonPesquisar = styled.button`
-  width: 14rem;
-  height: 37.09px;
-  font-weight: 700;
-  font-size: 15px;
-  background-color: #9c69e2;
-  color: #fff;
-  border-radius: 50px;
-  border: none;
-  margin: 43px auto 0px auto;
-  cursor: pointer;
-  background: #774fd1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.2s;
-  :hover {
-    background: #8c7bb3;
-  }
+export const TextRecomendacao = styled.h2`
+  text-align: center;
+  font-size: 18pt;
+  font-weight: 800;
+`
+export const ImgAmigoPost = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  display: block;
+  object-fit: cover;
+  margin: 25px 25px 0 25px;
 `
 export const DivBlocoDetalhe = styled.div`
-  margin-top: 140px;
+  margin: -23rem auto 5rem auto;
+`
+export const DivPost = styled.div`
+  background: #ffffff;
+  border: 1px solid #d3e2e5;
+  border-radius: 36px;
+  width: 59rem;
 `
 export const DivCampoInput = styled.div`
   width: 110rem;
-  margin: 64px auto;
   background: #ffffff;
   border: 1px solid #d3e2e5;
   border-radius: 20px;
-  padding: 64px 80px;
-  overflow: hidden;
-  position: absolute;
-  margin: 0;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  top: 43rem;
-  .input-container {
-    position: relative;
-  }
-
-  input {
-    border: 0;
-    border-bottom: 2px solid #9e9e9e;
-    outline: none;
-    transition: 0.2s ease-in-out;
-    box-sizing: border-box;
-  }
-
-  label {
-    top: 0;
-    left: 0;
-    right: 0;
-    color: #000;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    font-size: 12pt;
-    cursor: text;
-    transition: 0.2s ease-in-out;
-    box-sizing: border-box;
-  }
-
-  input,
-  label {
-    width: 100%;
-    height: 3rem;
-    font-size: 12pt;
-  }
-  input:valid,
-  input:focus {
-    border-bottom: 2px solid #353030c7;
-  }
-
-  input:valid + label,
-  input:focus + label {
-    color: #000;
-    font-size: 0.8rem;
-    top: -30px;
-    pointer-events: none;
-  }
-
-  h1 {
-    color: #616161;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 25px;
+  flex-wrap: wrap;
   section {
     margin: 15px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
@@ -139,5 +82,79 @@ export const DivCampoInput = styled.div`
     padding: 20px;
     border-radius: 0 0 2px 2px;
     background-color: #fff;
+  }
+`
+
+export const TextPost = styled.p`
+  font-size: 11pt;
+  font-weight: 800;
+
+  margin: 13pz 13px;
+  padding: 0px 25px;
+`
+export const DivRecomendacao = styled.div`
+  width: 33rem;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  .svg-inline--fa {
+    height: 3rem;
+  }
+`
+export const divImage = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+export const ImgRecomendacao = styled.img`
+  width: 55rem;
+  height: 210px;
+  margin: 0 auto;
+
+  /* border-radius: 50%; */
+`
+export const DivTextRecomendacao = styled.div`
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+`
+export const Estrelas = styled.div`
+  width: 100px;
+  color: #967100;
+  font-size: 19pt;
+  font-weight: 700;
+`
+export const DivButton = styled.div`
+  background-color: #c4c4c4;
+  margin: 0 auto;
+  width: 55rem;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+`
+export const Button = styled.button`
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background: #282119;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  :hover {
+    background: #865234;
   }
 `

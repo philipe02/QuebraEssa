@@ -8,7 +8,7 @@ const Requisitados = () => (
       </S.Title>
       <S.DivServicoRequisitados>
         <div className="mx-2">
-          <S.ImgService src="/assets/usedServices/JardinagemService.jpg" />
+          <S.ImgService src="/assets/usedServices/JardinagemService.jpeg" />
           <S.NameImgServive>Jardinagem</S.NameImgServive>
         </div>
         <div className="mx-2">
@@ -16,11 +16,11 @@ const Requisitados = () => (
           <S.NameImgServive>Fotografo</S.NameImgServive>
         </div>
         <div className="mx-2">
-          <S.ImgService src="/assets/usedServices/DesignerGraficoService.jpg" />
+          <S.ImgService src="/assets/usedServices/DesignerGraficoService.jpeg" />
           <S.NameImgServive>Designer gráfico</S.NameImgServive>
         </div>
         <div className="mx-2">
-          <S.ImgService src="/assets/usedServices/ProgramadorService.jpg" />
+          <S.ImgService src="/assets/usedServices/ProgramadorService.jpeg" />
           <S.NameImgServive>Programador</S.NameImgServive>
         </div>
       </S.DivServicoRequisitados>

@@ -60,10 +60,9 @@ export const DivButton = styled.div`
 `
 export const Estrelas = styled.div`
   width: 100px;
-  color: #774fd1;
-  svg {
-    height: 2em;
-  }
+  color: #967100;
+  font-size: 19pt;
+  font-weight: 700;
 `
 export const Button = styled.button`
   width: 48px;
