@@ -13,7 +13,7 @@ const SearchFriends = () => {
   useEffect(() => console.log(busca), [busca])
   useEffect(() => {
     getAllClientes().then(({ data }) => {
-      if (busca.length === 0) return setClientes('')
+      if (busca.length === 0) return setClientes(data.content)
       var valor = busca.toLowerCase()
       var filtrado = data.content.filter((obj) =>
         obj.nome.toLowerCase().includes(valor)
