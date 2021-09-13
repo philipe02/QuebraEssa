@@ -75,10 +75,12 @@ const Header = () => {
         <S.SearchIcon src="/assets/searchicon.svg" onClick={handleSearch} />
       </S.SearchContainer>
       {usuario.id && (
-        <S.AmigosContainer>
-          <S.AmigosImg src="/assets/imgAddAmigos.png" />
-          <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
-        </S.AmigosContainer>
+        <Link href="/Principal/BuscarAmigos">
+          <S.AmigosContainer>
+            <S.AmigosImg src="/assets/imgAddAmigos.png" />
+            <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
+          </S.AmigosContainer>
+        </Link>
       )}
       {usuario.id ? (
         <S.UserHeader className="dropdown ">

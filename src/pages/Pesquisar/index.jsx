@@ -22,13 +22,13 @@ const Pesquisar = () => {
 
     setFiltros({ ...filtros, [name]: value })
   }
+  const resetFilters = () => setFiltros(filtrosInicial)
 
-  const atualizarLista = (reset) => {
-    console.log('dale', filtros, router.query)
-    if (reset) {
-      router.push('/Pesquisar')
+  const atualizarLista = (params) => {
+    //Adicionando parametro para atualizar tanto não ficar atualizando ao digitar o filtro
+    if (params) {
       setCarregando(true)
-      getAllFornecedores()
+      getAllFornecedores(params)
         .then(({ data }) => {
           setFornecedores(data.content)
         })
@@ -43,8 +43,6 @@ const Pesquisar = () => {
       .finally(() => setCarregando(false))
   }
 
-  useEffect(() => atualizarLista(), [filtros])
-
   useEffect(() => {
     if (Object.keys(router.query).includes('search')) {
       setFiltros({ search: router.query.search })
@@ -54,7 +52,7 @@ const Pesquisar = () => {
     Object.keys(router.query).forEach((filtro) => {
       filtroFormatado = { ...filtroFormatado, [filtro]: router.query[filtro] }
     })
-    setFiltros(filtroFormatado)
+    atualizarLista(filtroFormatado)
   }, [router.query])
 
   return (
@@ -65,6 +63,7 @@ const Pesquisar = () => {
         handleChangeFiltros={handleChangeFiltros}
         atualizarLista={atualizarLista}
         fornecedores={fornecedores}
+        resetFilters={resetFilters}
       />
     </>
   )
