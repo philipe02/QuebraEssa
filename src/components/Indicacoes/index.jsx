@@ -1,13 +1,7 @@
 import * as S from './styles'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FiArrowRight } from 'react-icons/fi'
 
 const Indicacoes = () => {
-  let rows = []
-  for (let i = 0; i < 5; i++) {
-    rows.push(<FontAwesomeIcon icon={faStar} size="lg" />)
-  }
   return (
     <S.Wrapper>
       <S.TitleSectionIndicacao>Indicações</S.TitleSectionIndicacao>
@@ -31,7 +25,7 @@ const Indicacoes = () => {
             </S.DivTextIndicacao>
           </S.divImage>
           <S.DivButton>
-            <S.Estrelas>{rows}</S.Estrelas>
+            <S.Estrelas>Nota: 10</S.Estrelas>
             <S.Button>
               <FiArrowRight size={20} color="#fff" />
             </S.Button>
@@ -56,7 +50,7 @@ const Indicacoes = () => {
             </S.DivTextIndicacao>
           </S.divImage>
           <S.DivButton>
-            <S.Estrelas>{rows}</S.Estrelas>
+            <S.Estrelas>Nota: 10</S.Estrelas>
             <S.Button>
               <FiArrowRight size={20} color="#fff" />
             </S.Button>
@@ -81,7 +75,7 @@ const Indicacoes = () => {
             </S.DivTextIndicacao>
           </S.divImage>
           <S.DivButton>
-            <S.Estrelas>{rows}</S.Estrelas>
+            <S.Estrelas>Nota: 10</S.Estrelas>
             <S.Button>
               <FiArrowRight size={20} color="#fff" />
             </S.Button>

@@ -6,13 +6,15 @@ const PesquisaFornecedores = ({
   loading,
   handleChangeFiltros,
   atualizarLista,
-  fornecedores
+  fornecedores,
+  resetFilters
 }) => {
   return (
     <S.Wrapper>
       <Filtros
         handleChange={handleChangeFiltros}
         atualizarLista={atualizarLista}
+        resetFilters={resetFilters}
       />
       <Listagem loading={loading} fornecedores={fornecedores} />
     </S.Wrapper>
