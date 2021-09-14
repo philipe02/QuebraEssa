@@ -1,5 +1,6 @@
 import * as S from './styles'
 import Indicacoes from '../Indicacoes'
+import HalldaFama from 'components/HalldaFama'
 
 const Principal = () => (
   <S.Wrapper>
@@ -21,7 +22,7 @@ const Principal = () => (
       </S.DivGridContrate>
     </section>
     <Indicacoes />
-
+    <HalldaFama />
     <S.SectionRecomendacoes className="container mt-5 mb-5">
       <S.Title className="mb-5 h1 text-center">Nossas recomendações</S.Title>
       <S.DivEfeito></S.DivEfeito>
