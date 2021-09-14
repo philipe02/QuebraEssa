@@ -68,7 +68,10 @@ export const DropDown = styled.div`
   background-color: #fff;
   border-radius: 1rem;
   padding: 2rem 0;
-  transition: opacity 1s ease;
+  &.dropdown-menu.show {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `
 export const SearchContainer = styled.div`
   display: flex;
