@@ -45,7 +45,7 @@ const Pesquisar = () => {
 
   useEffect(() => {
     if (Object.keys(router.query).includes('search')) {
-      setFiltros({ search: router.query.search })
+      atualizarLista({ search: router.query.search })
       return
     }
     let filtroFormatado = filtros

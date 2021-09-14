@@ -70,7 +70,7 @@ const Header = () => {
           placeholder="Pesquisar serviços"
           value={pesquisa}
           onChange={handleChangePesquisa}
-          onKeyPress={(e) => console.log(e)}
+          onKeyPress={({ key }) => key === 'Enter' && handleSearch()}
         />
         <S.SearchIcon src="/assets/searchicon.svg" onClick={handleSearch} />
       </S.SearchContainer>
