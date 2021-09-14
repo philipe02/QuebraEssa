@@ -2,6 +2,8 @@
 
 Uma aplicação web feita com o objetivo de facilitar a busca de profissionais que oferecem serviços diversos.
 
+Acesse o Quebra Essa clicando [aqui](https://quebra-essa.vercel.app)
+
 <p align="center">
   <img alt="Tela inicial da aplicação Quebra Essa" src=".github/QuebraEssa.png">
 </p>
