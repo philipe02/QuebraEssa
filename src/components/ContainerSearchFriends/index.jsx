@@ -13,7 +13,7 @@ const SearchFriends = () => {
   useEffect(() => console.log(busca), [busca])
   useEffect(() => {
     getAllClientes().then(({ data }) => {
-      if (busca.length === 0) return setClientes('')
+      if (busca.length === 0) return setClientes(data.content)
       var valor = busca.toLowerCase()
       var filtrado = data.content.filter((obj) =>
         obj.nome.toLowerCase().includes(valor)
@@ -52,9 +52,7 @@ const SearchFriends = () => {
             {clientes &&
               clientes.map((cliente) => (
                 // eslint-disable-next-line react/jsx-key
-                <Link
-                  href={'/Principal/BuscarAmigos/DetalheAmigo/' + cliente.cpf}
-                >
+                <Link href={'/BuscarAmigos/DetalheAmigo/' + cliente.cpf}>
                   <S.divCliente>
                     <S.ImgCliente src="https://picsum.photos/200" />
                     <S.NameCliente scope="row">{cliente.nome}</S.NameCliente>

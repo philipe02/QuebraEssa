@@ -16,7 +16,7 @@ const Principal = () => (
           </S.TextHelp>
         </div>
         <div>
-          <S.Logo src="/assets/usedServices/imgIntroducao.png" />
+          <S.Logo src="/assets/usedServices/ImgIntroducao.png" />
         </div>
       </S.DivGridContrate>
     </section>

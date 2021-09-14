@@ -22,7 +22,7 @@ const ContainerDetalheAmigo = () => {
     <S.WrapperDetalheAmigo>
       <S.DivDetalhesAmigos>
         <S.DivVoltar className="top-bar-container">
-          <Link href="/Principal/BuscarAmigos">
+          <Link href="/BuscarAmigos">
             <FiArrowLeft size={30} color="#fff" />
           </Link>
         </S.DivVoltar>
