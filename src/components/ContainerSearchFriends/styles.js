@@ -5,60 +5,85 @@ export const WrapperSearchFriends = styled.section`
   font-family: 'poppins', sans-serif;
 `
 export const DivBuscarAmigos = styled.div`
-  background-color: #774fd1;
-  background-position: top;
   display: flex;
-  flex-direction: column;
-  height: 21rem;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30rem;
+  background-color: #774fd1;
 `
 export const DivVoltar = styled.div`
   cursor: pointer;
   width: 90%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem 0;
+  margin: 0 0 20rem;
+  width: 90%;
+}
 `
-export const DivContainer = styled.div`
-  width: 100%;
-  height: 100vh;
-`
-export const ButtonPesquisar = styled.button`
-  width: 14rem;
-  height: 37.09px;
-  font-weight: 700;
-  font-size: 15px;
-  background-color: #9c69e2;
-  color: #fff;
-  border-radius: 50px;
-  border: none;
-  margin: 43px auto 0px auto;
-  cursor: pointer;
-  background: #774fd1;
+export const DivBlocoDetalhe = styled.div`
+  margin: -23rem auto 5rem auto;
   display: flex;
   justify-content: center;
+`
+export const ImgCliente = styled.img`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+`
+export const NameCliente = styled.h3`
+  font-size: 15pt;
+  margin-left: 6px;
+  font-weight: bold;
+`
+export const divCliente = styled.div`
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
   align-items: center;
-  transition: background-color 0.2s;
+  border-radius: 150px;
+  position: relative;
   :hover {
-    background: #8c7bb3;
+    background-color: #e0dcdc;
   }
+`
+export const DivPlus = styled.div`
+  position: absolute;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  right: 4%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: #774fd1;
+  border-radius: 50%;
+  background-color: #774fd1;
+  width: 8%;
+  height: 46px;
+  cursor: pointer;
 `
 export const DivCampoInput = styled.div`
   width: 700px;
-  margin: 64px auto;
+  height: 47rem;
   background: #ffffff;
   border: 1px solid #d3e2e5;
-  border-radius: 20px;
+  border-radius: 11px;
   padding: 64px 80px;
   overflow: hidden;
-  position: absolute;
-  margin: 0;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  top: 90%;
+  overflow: scroll;
+  ::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    background: #f4f4f4;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+  }
   .input-container {
     position: relative;
   }

@@ -1,39 +1,24 @@
+import { useEffect, useState } from 'react'
+import { getAllServicos } from 'service/servicos'
 import * as S from './styles'
 
-const servicos = [{ titulo: 'Marceneiro' }, { titulo: 'Motorista' }]
-
-const Filtros = ({ handleChange, atualizarLista }) => {
+const Filtros = ({ handleChange, atualizarLista, resetFilters }) => {
+  const [servicos, setServicos] = useState([])
   const limparFiltros = () => {
     document.querySelector('[name=servico]').value = ''
-    document.querySelector('[name=fornecedor]').value = ''
-    document.querySelector('[name=avaliacao]').value = ''
+    document.querySelector('[name=nome]').value = ''
+    document.querySelector('[name=nota]').value = ''
+    resetFilters()
     atualizarLista(true)
   }
   const numberFormatter = ({ target }) => {
     target.value = target.value.replace(/[^0-9]/g, '')
   }
-  /*  useEffect(() => {
-    const ratingStars = [...document.getElementsByClassName('rating__star')]
-    executeRating(ratingStars)
-  }) */
-
-  /* function executeRating(stars) {
-    const starClassActive = 'rating__star fas fa-star'
-    const starClassInactive = 'rating__star far fa-star'
-    const starsLength = stars.length
-    let i
-    stars.map((star) => {
-      star.onclick = () => {
-        i = stars.indexOf(star)
-
-        if (star.className === starClassInactive) {
-          for (i; i >= 0; --i) stars[i].className = starClassActive
-        } else {
-          for (i; i < starsLength; ++i) stars[i].class = starClassInactive
-        }
-      }
+  useEffect(() => {
+    getAllServicos().then(({ data }) => {
+      setServicos(data.content)
     })
-  } */
+  }, [])
 
   return (
     <S.Wrapper>
@@ -59,20 +44,20 @@ const Filtros = ({ handleChange, atualizarLista }) => {
         <S.FormLabel>Fornecedor</S.FormLabel>
         <S.Input
           className="form-control"
-          name="fornecedor"
+          name="nome"
           placeholder="Insira o nome do fornecedor"
           onChange={handleChange}
         />
       </S.FormContainer>
       <S.FormContainer>
-        <S.FormLabel>Avaliação mínima</S.FormLabel>
+        <S.FormLabel>Nota mínima</S.FormLabel>
         <S.Input
           className="form-control avaliacao"
-          name="avaliacao"
-          pattern="[0-9]{2}"
-          placeholder="0 a 10"
+          name="nota"
+          pattern="[0-9]{1}"
+          placeholder="0 a 5"
           onInput={numberFormatter}
-          maxLength="2"
+          maxLength="1"
           onChange={handleChange}
         />
       </S.FormContainer>
