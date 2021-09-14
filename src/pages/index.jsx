@@ -1,9 +1,10 @@
-import Main from 'components/Main'
-export default function Root() {
-  return (
-    <Main
-      title="Projeto Hackaton"
-      description="Projeto desenvolvido para o Hackaton da Hub Salvador"
-    />
-  )
+import ContainerPrincipal from 'components/ContainerPrincipal'
+const Principal = () => <ContainerPrincipal />
+
+export async function getServerSideProps() {
+  await new Promise((resolve) => {
+    setTimeout(resolve, 100)
+  })
+  return { props: {} }
 }
+export default Principal

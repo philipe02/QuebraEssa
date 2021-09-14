@@ -17,7 +17,7 @@ const Principal = () => (
           </S.TextHelp>
         </div>
         <div>
-          <S.Logo src="/assets/imgIntroducao.png" />
+          <S.Logo src="/assets/usedServices/ImgIntroducao.png" />
         </div>
       </S.DivGridContrate>
     </section>
@@ -33,7 +33,7 @@ const Principal = () => (
 
         <S.DivIndicacoes>
           <S.Title className="text-center font-weight-bold">Indicações</S.Title>
-          <p className="h2 font-weight-bold text-center">
+          <p className="h3 text-center">
             Para uma melhor experiencia indique os serviços aos seus amigos.
           </p>
         </S.DivIndicacoes>

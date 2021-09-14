@@ -6,16 +6,10 @@ import { useRouter } from 'next/router'
 import { UserContext, userInitialState, userTeste } from 'context/UserContext'
 
 const Header = () => {
-  const [servicosMenu, setServicosMenu] = useState(false)
-  const [userMenu, setUserMenu] = useState(false)
   const [pesquisa, setPesquisa] = useState('')
-  const [servicos, setServicos] = useState()
+  const [servicos, setServicos] = useState([])
   const [usuario, setUsuario] = useContext(UserContext)
   const router = useRouter()
-
-  const abrirServicosMenu = () => setServicosMenu(true)
-  const fecharServicosMenu = () => setServicosMenu(false)
-  const toggleUserMenu = () => setUserMenu(!userMenu)
 
   const handleSearch = () => {
     pesquisa && router.push(`/Pesquisar?search=${pesquisa}`)
@@ -29,10 +23,9 @@ const Header = () => {
     setUsuario(userTeste)
   }
 
-  useEffect(() => console.log(servicos, servicosMenu), [servicos, servicosMenu])
   useEffect(() => {
     getAllServicos().then(({ data }) => {
-      setServicos(data)
+      setServicos(data.content)
     })
   }, [])
   return (
@@ -46,24 +39,29 @@ const Header = () => {
         <Link href="/" passHref>
           <S.MenuItem id="homeLink">Home</S.MenuItem>
         </Link>
-        <S.MenuItem id="servicoLink" onMouseEnter={abrirServicosMenu}>
-          Serviços
-          {servicos && servicosMenu && (
-            <S.DropDown id="dropdownServico" onMouseLeave={fecharServicosMenu}>
-              {servicos &&
-                servicos.map((servico) => (
-                  <Link
-                    key={servico.titulo}
-                    href={`/Pesquisar?servico=${servico.titulo}`}
-                    passHref
-                    className="submenuItem"
-                  >
-                    <S.SubMenuItem>{servico.titulo}</S.SubMenuItem>
-                  </Link>
-                ))}
-            </S.DropDown>
-          )}
-        </S.MenuItem>
+        <S.MenuDropdown id="servicoLink" className="nav-item dropdown">
+          <S.MenuItem
+            className="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+          >
+            Serviços
+          </S.MenuItem>
+          <S.DropDown id="dropdownServico" className="dropdown-menu">
+            {servicos.map((servico) => (
+              <Link
+                key={servico.titulo}
+                href={`/Pesquisar?servico=${servico.titulo}`}
+                passHref
+                className="submenuItem"
+              >
+                <S.SubMenuItem>{servico.titulo}</S.SubMenuItem>
+              </Link>
+            ))}
+          </S.DropDown>
+        </S.MenuDropdown>
       </S.Menu>
       <S.SearchContainer>
         <S.Search
@@ -72,11 +70,12 @@ const Header = () => {
           placeholder="Pesquisar serviços"
           value={pesquisa}
           onChange={handleChangePesquisa}
+          onKeyPress={(e) => console.log(e)}
         />
         <S.SearchIcon src="/assets/searchicon.svg" onClick={handleSearch} />
       </S.SearchContainer>
       {usuario.id && (
-        <Link href="/Principal/BuscarAmigos">
+        <Link href="/BuscarAmigos">
           <S.AmigosContainer>
             <S.AmigosImg src="/assets/imgAddAmigos.png" />
             <S.AmigosLabel>Buscar amigos</S.AmigosLabel>
@@ -84,20 +83,24 @@ const Header = () => {
         </Link>
       )}
       {usuario.id ? (
-        <S.UserHeader onClick={toggleUserMenu}>
-          <S.UserLabel>{`${usuario['first-name']} ${usuario['last-name']}`}</S.UserLabel>
-          <S.UserPhoto src="https://picsum.photos/200"></S.UserPhoto>
-          {userMenu && (
-            <S.UserMenu>
-              <Link href="/">
-                <S.UserOption onClick={logarUsuario}>Sair</S.UserOption>
-              </Link>
-            </S.UserMenu>
-          )}
+        <S.UserHeader className="dropdown ">
+          <S.UserBtn
+            className="btn btn-secondary"
+            type="button"
+            id="dropdownMenu2"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <S.UserLabel>{`${usuario['first-name']} ${usuario['last-name']}`}</S.UserLabel>
+            <S.UserPhoto src="https://picsum.photos/200"></S.UserPhoto>
+          </S.UserBtn>
+          <S.UserMenu className="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <S.UserOption onClick={logarUsuario}>Sair</S.UserOption>
+          </S.UserMenu>
         </S.UserHeader>
       ) : (
         <S.Login>
-          <Link href="/Principal">
+          <Link href="#">
             <S.Signin id="entrarBtn" onClick={logarUsuario}>
               Entrar
             </S.Signin>
