@@ -75,7 +75,7 @@ const Header = () => {
         <S.SearchIcon src="/assets/searchicon.svg" onClick={handleSearch} />
       </S.SearchContainer>
       {usuario.id && (
-        <Link href="/Principal/BuscarAmigos">
+        <Link href="/BuscarAmigos">
           <S.AmigosContainer>
             <S.AmigosImg src="/assets/imgAddAmigos.png" />
             <S.AmigosLabel>Buscar amigos</S.AmigosLabel>

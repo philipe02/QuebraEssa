@@ -52,9 +52,7 @@ const SearchFriends = () => {
             {clientes &&
               clientes.map((cliente) => (
                 // eslint-disable-next-line react/jsx-key
-                <Link
-                  href={'/Principal/BuscarAmigos/DetalheAmigo/' + cliente.cpf}
-                >
+                <Link href={'/BuscarAmigos/DetalheAmigo/' + cliente.cpf}>
                   <S.divCliente>
                     <S.ImgCliente src="https://picsum.photos/200" />
                     <S.NameCliente scope="row">{cliente.nome}</S.NameCliente>
